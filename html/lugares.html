@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="estilos">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Lugares</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+          
+</head>
+<body>
+    <div class="row">
+            <nav>
+                <ul class="contenedor row">
+                    <li><a href="#" style="font-weight: bold;" class="logo">TURISMO-SV</a> </li>
+                    <li>
+                        <a href="#miModal" class="activo">
+                        <span class="fas fa-plus "></span>
+                        Añadir Lugar
+                        </a>
+                    </li>
+                    <li><a href="../html/principal.html"><span class="fas fa-home"></span><b> Inicio</b></a></li>
+                    <li><a href="#" class="activo"><span class="fas fa-globe"></span><b> Lugares</b></a></li>
+                    <li><a href="../html/contac.html"><span class="fas fa-address-book"></span><b> Contactos</b></a></li>
+                    <li><a href="../html/acerca.html"><span class="fas fa-info-circle"></span><b> Acerca De</b></a></li>
+                </ul>
+            </nav>
+        </div>
+    
+
+    <div class="container" id="lista">
+        <!--AQUI ME CARGA LOS DATOS DE LO QUE LLENO EN EL FORMULARIO-->
+    </div>
+
+    <div id="miModal" class="modal">
+        <div class="modal-contenido">
+          <form action="" method="GET" class="transparente" id="formLugar" >
+              
+          <a href="#" style="color:red; text-decoration:none; font-weight:bold; margin-left: 395px;">X</a>
+            <fieldset>
+                <legend style="font-weight: bold; color: white;">LUGAR TURISTICO</legend>
+                <div>
+                <div>
+                    <label for="cod"></label>
+                    <input value="1" required type="text" id="cod" disabled style="display: none;">
+                </div>
+                <div>
+                    <label for="imagen">Elija la imagen del lugar turístico</label>
+                    <input type="file"  onchange="previewFile()" />
+                    <img src="" id="imgPrev" height="50px" width="100px" alt="">
+                    <input type="text" id="imagen" style="display: none;">
+                </div>
+
+                <div class="col-12 ">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required>
+                </div>
+
+                <div class="col-12 ">
+                    <label for="pais">Pais:</label>
+                    <input type="text" id="pais" placeholder="El Salvador" required disabled>
+                </div>
+
+                <div class="col-12 ">
+                    <label for="departamento">Departamento:</label>
+                    <input type="text" class="nobox" id="departamento" required>
+                </div>
+
+                <div class="col-12 ">
+                    <label for="municipio">Municipio:</label>
+                    <input type="text" id="municipio" required>
+                </div>
+
+
+                <button id="btnadd" style="margin-top:20px; margin-left:0;" class="button" type="submit" onclick="saveLugar()">Agregar</button>
+            </fieldset>
+        </form>
+        </div>  
+      </div>
+
+
+
+
+        <!-- ===== IONICONS ===== -->
+        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+        <script src="../JS/codJS.js"></script>
+</body>
+</html>
